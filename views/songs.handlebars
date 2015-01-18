@@ -1,0 +1,22 @@
+<h2>Songs</h2>
+{{#each songs}}
+	<h3>{{title}}</h3>
+	<p>{{artist}}</p>
+	<p>{{length}}</p>
+{{/each}}
+<div class="formContainer">
+	<form class="form-horizontal newsletterForm" role="form"
+	action="/add-song" method="POST">
+		<input type="text" name="artist" placeholder="Artist name" required>
+		<div class="form-group">
+			<div class="col-sm-4">
+				<input type="title" class="form-control" required name="title">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-4">
+				<button type="submit" class="btn btn-default">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>
